@@ -1,0 +1,100 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #1f2937; /* গাঢ় ধূসর ব্লু */
+  color: #e2e8f0; /* হালকা ধূসর */
+  margin: 0;
+  padding: 20px;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #fbbf24; /* সোনালি হলুদ */
+  margin-bottom: 20px;
+}
+
+form#loginForm {
+  max-width: 350px;
+  margin: 0 auto 40px;
+  background: #374151; /* গাঢ় ধূসর */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+form#loginForm label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #fbbf24;
+}
+
+form#loginForm input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+form#loginForm button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background-color: #f59e0b; /* গাঢ় হলুদ */
+  border: none;
+  border-radius: 8px;
+  color: #1f2937;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form#loginForm button:hover {
+  background-color: #d97706; /* আরও গাঢ় হলুদ */
+}
+
+#adminSection {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #374151;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(251, 191, 36, 0.25);
+}
+
+thead tr {
+  background-color: #fbbf24;
+  color: #1f2937;
+}
+
+thead th, tbody td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #6b7280;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #4b5563;
+}
+
+tbody tr:hover {
+  background-color: #6b7280;
+  cursor: pointer;
+}
+
+a {
+  color: #fbbf24;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  }
