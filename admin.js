@@ -8,6 +8,7 @@ const firebaseConfig = {
   measurementId: "G-7R0LNRW5ZM"
 };
 
+// Firebase init
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
@@ -15,24 +16,15 @@ const loginForm = document.getElementById('loginForm');
 const adminSection = document.getElementById('adminSection');
 const requestsTableBody = document.getElementById('requestsTableBody');
 
-const adminUser = "nahid";
-const adminPass = "mdnahid44551@";
-
+// সরাসরি Admin Panel দেখাও (পাসওয়ার্ড চেক ছাড়াই)
 loginForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-
-  const username = document.getElementById('username').value.trim();
-  const password = document.getElementById('password').value.trim();
-
-  if (username === adminUser && password === adminPass) {
-    loginForm.style.display = "none";
-    adminSection.style.display = "block";
-    loadRequests();
-  } else {
-    alert("Invalid username or password!");
-  }
+  loginForm.style.display = "none";
+  adminSection.style.display = "block";
+  loadRequests();
 });
 
+// রিকুয়েস্ট লোডার
 async function loadRequests() {
   requestsTableBody.innerHTML = "Loading...";
   try {
@@ -69,15 +61,15 @@ async function loadRequests() {
   }
 }
 
-// স্ট্যাটাস আপডেট করার ফাংশন
+// স্ট্যাটাস আপডেট
 async function updateStatus(requestId, newStatus) {
   try {
     await db.collection('supportRequests').doc(requestId).update({
       status: newStatus
     });
     alert(`Request ${requestId} status updated to ${newStatus}`);
-    loadRequests(); // রিলোড করো যাতে আপডেট দেখায়
+    loadRequests();
   } catch (error) {
     alert('Failed to update status: ' + error.message);
   }
-  }
+}
