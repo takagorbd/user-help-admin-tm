@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Admin Login</h2>
+
+  <form id="loginForm">
+    <label>Username:</label>
+    <input type="text" id="username" required />
+    <label>Password:</label>
+    <input type="password" id="password" required />
+    <button type="submit">Login</button>
+  </form>
+
+  <div id="adminSection" style="display:none;">
+    <h3>Support Requests</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Problem</th>
+          <th>Contact</th>
+          <th>Bkash Number</th>
+          <th>Screenshot</th>
+          <th>Status</th>
+          <th>Change Status</th>
+        </tr>
+      </thead>
+      <tbody id="requestsTableBody"></tbody>
+    </table>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+  <script src="adminPanel.js"></script>
+</body>
+</html>
