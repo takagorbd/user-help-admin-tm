@@ -1,42 +1,52 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Admin Panel</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f0f0f5; }
+    #adminSection { display: none; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    th { background-color: #eee; }
+    button { padding: 5px 10px; margin-right: 5px; }
+  </style>
 </head>
 <body>
-  <h2>Admin Login</h2>
+
+  <h2>Admin Panel Login</h2>
 
   <form id="loginForm">
-    <label>Username:</label>
-    <input type="text" id="username" required />
-    <label>Password:</label>
-    <input type="password" id="password" required />
+    <p>No username or password needed. Just click login.</p>
     <button type="submit">Login</button>
   </form>
 
-  <div id="adminSection" style="display:none;">
-    <h3>Support Requests</h3>
+  <div id="adminSection">
+    <h2>Support Requests</h2>
     <table>
       <thead>
         <tr>
           <th>ID</th>
-          <th>Problem</th>
+          <th>Problem Type</th>
           <th>Contact</th>
           <th>Bkash Number</th>
           <th>Screenshot</th>
           <th>Status</th>
-          <th>Change Status</th>
+          <th>Action</th>
         </tr>
       </thead>
-      <tbody id="requestsTableBody"></tbody>
+      <tbody id="requestsTableBody">
+        <!-- Data will appear here -->
+      </tbody>
     </table>
   </div>
 
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
-  <script src="adminPanel.js"></script>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"></script>
+
+  <!-- তোমার JavaScript কোড -->
+  <script src="admin.js"></script>
+
 </body>
 </html>
