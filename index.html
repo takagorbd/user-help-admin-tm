@@ -1,52 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="bn">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Admin Panel</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; background: #f0f0f5; }
-    #adminSection { display: none; }
-    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
-    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
-    th { background-color: #eee; }
-    button { padding: 5px 10px; margin-right: 5px; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <h2>Admin Panel Login</h2>
+  <h2>Admin Panel</h2>
 
   <form id="loginForm">
-    <p>No username or password needed. Just click login.</p>
+    <p>এডমিন লগইন করার জন্য নিচের বাটনে ক্লিক করুন।</p>
     <button type="submit">Login</button>
   </form>
 
-  <div id="adminSection">
-    <h2>Support Requests</h2>
+  <div id="adminSection" style="display:none;">
+    <h3>Support Requests</h3>
     <table>
       <thead>
         <tr>
           <th>ID</th>
-          <th>Problem Type</th>
+          <th>Problem</th>
           <th>Contact</th>
           <th>Bkash Number</th>
           <th>Screenshot</th>
           <th>Status</th>
-          <th>Action</th>
+          <th>Change Status</th>
         </tr>
       </thead>
-      <tbody id="requestsTableBody">
-        <!-- Data will appear here -->
-      </tbody>
+      <tbody id="requestsTableBody"></tbody>
     </table>
   </div>
 
   <!-- Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"></script>
-
-  <!-- তোমার JavaScript কোড -->
-  <script src="admin.js"></script>
-
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+  
+  <!-- Admin JS -->
+  <script src="adminPanel.js"></script>
 </body>
 </html>
