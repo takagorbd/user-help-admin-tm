@@ -15,8 +15,8 @@ const loginForm = document.getElementById('loginForm');
 const adminSection = document.getElementById('adminSection');
 const requestsTableBody = document.getElementById('requestsTableBody');
 
-const adminUser = "admin";
-const adminPass = "yourpassword";
+const adminUser = "nahid";
+const adminPass = "mdnahid44551@";
 
 loginForm.addEventListener('submit', async (e) => {
   e.preventDefault();
